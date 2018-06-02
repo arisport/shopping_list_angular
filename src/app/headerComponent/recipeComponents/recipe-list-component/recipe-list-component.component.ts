@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {RecipeModel} from '../recipe.model';
 
 @Component({
   selector: 'app-recipe-list-component',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeListComponentComponent implements OnInit {
 
-  constructor() { }
+  recipes: RecipeModel[] = [
+    new RecipeModel('Test Recipe', 'Test Desc',
+      'https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/frying-pan-pizza-easy-recipe-collection.jpg')
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
